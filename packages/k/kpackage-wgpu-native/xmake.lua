@@ -5,17 +5,17 @@ package("kpackage-wgpu-native")
 
     --if is_plat("windows") and is_arch("x64") then
         --if is_debug() then
-            add_urls("https://github.com/gfx-rs/wgpu-native/releases/download/$(version)/wgpu-windows-x86_64-msvc-debug.zip")
-            add_versions("v22.1.0.5", "9e1591d60c2d2ee20d6d4a63bc01c7c5eecf7734761673160aa639e550a1ba4d")
+            add_urls("https://github.com/gfx-rs/wgpu-native/releases/download/v$(version)/wgpu-windows-x86_64-msvc-debug.zip")
+            add_versions("22.1.0.5", "9e1591d60c2d2ee20d6d4a63bc01c7c5eecf7734761673160aa639e550a1ba4d")
         -- else
         --     add_urls("https://github.com/gfx-rs/wgpu-native/releases/download/$(version)/wgpu-windows-x86_64-msvc-release.zip")
         --     add_versions("v22.1.0.5", "9e1591d60c2d2ee20d6d4a63bc01c7c5eecf7734761673160aa639e550a1ba4d")
         -- end
     --end
 
-    if is_plat("windows") then
-        add_configs("vs_runtime", {description = "Set vs compiler runtime.", default = "MD", readonly = true})
-    end
+    -- if is_plat("windows") then
+    --     add_configs("vs_runtime", {description = "Set vs compiler runtime.", default = "MD", readonly = true})
+    -- end
 
     add_includedirs("include", "include/webgpu","include/wgpu")
 
