@@ -5,7 +5,7 @@ package("kpackage-wgpu-native")
 
     --if is_plat("windows") and is_arch("x64") then
         --if is_debug() then
-            add_urls("https://github.com/gfx-rs/wgpu-native/releases/download/v$(version)/wgpu-windows-x86_64-msvc-debug.zip")
+            add_urls("https://github.com/gfx-rs/wgpu-native/releases/download/v22.1.0.5/wgpu-windows-x86_64-msvc-debug.zip")
             add_versions("22.1.0.5", "4D63E16941B7ABD8491ACBABF78B3F74A52025276A2A8FADF22E7BD20C1540BE")
         -- else
         --     add_urls("https://github.com/gfx-rs/wgpu-native/releases/download/$(version)/wgpu-windows-x86_64-msvc-release.zip")
