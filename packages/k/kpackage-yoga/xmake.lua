@@ -6,7 +6,7 @@ package("kpackage-yoga")
     --add_urls("https://github.com/facebook/yoga.git")
 
     set_urls("https://github.com/gebo-10/KRepo/releases/download/untagged-833bb57b1e0c7985d9b2/yoga.zip")
-    add_versions("3.1.0")
+    add_versions("3.1.0","main")
     on_install("windows", function (package)
         os.cp("include", package:installdir())
         --(package:debug() and "Debug" or "Release")
