@@ -4,7 +4,7 @@ package("kpackage-wgpu-native")
     set_license("Apache-2.0")
 
     if is_plat("windows") and is_arch("x64") then
-        if package:debug() then
+        if is_debug() then
             add_urls("https://github.com/gfx-rs/wgpu-native/releases/download/$(version)/wgpu-windows-x86_64-msvc-debug.zip")
             add_versions("v22.1.0.5", "9e1591d60c2d2ee20d6d4a63bc01c7c5eecf7734761673160aa639e550a1ba4d")
         else
