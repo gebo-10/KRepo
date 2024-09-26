@@ -29,6 +29,5 @@ package("kpackage-wgpu-native")
         os.cp("include/", package:installdir("include"))
         if package:is_plat("windows") then
                 os.cp("wgpu_native.lib", package:installdir("lib"))
-            end
         end
     end)
