@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
 add_rules("utils.install.cmake_importfiles")
-set_languages("cxx14")
+set_languages("c++17")
 
 option("glfw",             {showmenu = true,  default = false})
 option("opengl3",          {showmenu = true,  default = false})
