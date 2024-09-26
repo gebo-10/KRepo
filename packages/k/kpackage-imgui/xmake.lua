@@ -11,7 +11,7 @@ package("kpackage-imgui")
     add_configs("vulkan",           {description = "Enable the vulkan backend", default = false, type = "boolean"})
     add_configs("sdl2",             {description = "Enable the sdl2 backend with sdl2_renderer", default = false, type = "boolean"})
     
-    add_includedirs("include", "backends")
+    add_includedirs("include", "include/backends")
 
     on_install("windows", function (package)
         local configs = {
@@ -22,5 +22,6 @@ package("kpackage-imgui")
         }
 
         os.cp(path.join(package:scriptdir(), "port", "xmake.lua"), "xmake.lua")
+        os.cp("backends/*.h",package:installdir("include/backends"))
         import("package.tools.xmake").install(package, configs)
     end)
