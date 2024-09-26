@@ -34,3 +34,21 @@ package("kpackage-wgpu-native")
         os.cp("lib/*.lib", package:installdir("lib"))
         os.cp("lib/*.dll", package:installdir("lib"))
     end)
+
+--local script
+-- package("wgpu")
+--     set_description("The wgpu package")
+
+--     on_load(function (package)
+--         --package:set("installdir", os.scriptdir())
+--         package:set("installdir", path.join(os.projectdir(),"external/wgpu"))
+--     end)
+
+--     on_fetch(function (package)
+--         --is_debug
+--         local result = {}
+--         result.links = "wgpu_native"
+--         result.linkdirs = package:installdir("debug/lib")
+--         result.includedirs = {package:installdir("debug/include"),package:installdir("debug/include/webgpu")}
+--         return result
+--     end)
