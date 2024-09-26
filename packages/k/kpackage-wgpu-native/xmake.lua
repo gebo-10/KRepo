@@ -26,7 +26,7 @@ package("kpackage-wgpu-native")
     --add_urls("https://github.com/facebook/yoga.git")
 
     set_urls("https://github.com/gfx-rs/wgpu-native/releases/download/v22.1.0.5/wgpu-windows-x86_64-msvc-debug.zip")
-    add_versions("22.1.0.5","4d63e16941b7abd8491acbabf78b3f74a52025276a2a8fadf22e7bd20c1540be")
+    add_versions("22.1.0","4d63e16941b7abd8491acbabf78b3f74a52025276a2a8fadf22e7bd20c1540be")
     add_includedirs("include", "include/webgpu","include/wgpu")
     on_install("windows", function (package)
         os.cp("include", package:installdir())
